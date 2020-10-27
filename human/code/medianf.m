@@ -1,0 +1,1 @@
+function R = medianf(X,W)nc = size(X,2);nr = size(X,1);R = zeros(size(X));w2 = floor(W/2);xx = [zeros(nr, w2),X,zeros(nr, w2)];for c = 1:nc;  R(:,c) = median(xx(:,c-1+[1:W])')';end
